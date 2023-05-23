@@ -4,7 +4,7 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, handleResumeScroll, isBlog }) => {
   const [, setMounted] = useState(false);
 
   const { name, showBlog, showResume } = data;
@@ -53,13 +53,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     <Button>Blog</Button>
                   )}
                   {showResume && (
-                    <Button
-                      onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
-                      }
-                    >
-                      Resume
-                    </Button>
+                    <Button onClick={handleResumeScroll}>Experience</Button>
                   )}
 
                   <Button
@@ -77,11 +71,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     <Button >Blog</Button>
                   )}
                   {showResume && (
-                    <Button
-                      classes="first:ml-1"
-                    >
-                      Resume
-                    </Button>
+                    <Button onClick={handleResumeScroll}>Experience</Button>
                   )}
 
                   <Button
@@ -111,11 +101,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button >Blog</Button>
             )}
             {showResume && (
-              <Button
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
+              <Button onClick={handleResumeScroll}>Experience</Button>
             )}
 
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
@@ -128,13 +114,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showBlog && (
               <Button >Blog</Button>
             )}
-            {showResume && (
-              <Button
-                classes="first:ml-1"
-              >
-                Resume
-              </Button>
-            )}
+            <Button onClick={handleResumeScroll}>Experience</Button>
 
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
               Contact

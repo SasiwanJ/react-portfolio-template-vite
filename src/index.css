@@ -77,3 +77,12 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+button,
+input[type=button] {
+  outline: none;
+}
+button::-moz-focus-inner,
+input[type=button]::-moz-focus-inner {
+  border: 0;
+}
