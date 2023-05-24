@@ -1,8 +1,10 @@
 import React from "react";
 
 const ProjectResume = ({ dates, type, position, bullets }) => {
-  const [bulletsLocal, ] = React.useState(bullets.split(","));
-
+  const [bulletsLocal, setBulletLocal] = React.useState(bullets.split(","));
+  if (bulletsLocal[0] == "") {
+    setBulletLocal([])
+  }
   return (
     <div className="mt-5 w-full flex mob:flex-col desktop:flex-row justify-between">
       <div className="text-lg w-2/5">
@@ -12,9 +14,9 @@ const ProjectResume = ({ dates, type, position, bullets }) => {
       <div className="w-3/5">
         <h2 className="text-lg font-bold">{position}</h2>
         {bulletsLocal && bulletsLocal.length > 0 && (
-          <ul className="list-disc">
+          <ul className="ml-5 w-64 list-disc">
             {bulletsLocal.map((bullet, index) => (
-              <li key={index} className="text-sm my-1 opacity-70">
+              <li key={index} className="text-sm opacity-70">
                 {bullet}
               </li>
             ))}

@@ -9,6 +9,7 @@ import { useIsomorphicLayoutEffect } from "./utils";
 import { stagger } from "./animations";
 import Footer from "./components/Footer";
 import profile from "../images/sasiwan.png"
+import SkillMiniIcon from "./components/Skill";
 
 // Local Data
 import data from "./data/portfolio.json";
@@ -125,7 +126,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        {/* <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
           <h1 className="text-2xl text-bold">Technical Skill</h1>
           <div className="mt-5 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
@@ -136,20 +137,36 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={resumeRef}>
-          <h1 className="text-2xl text-bold">Experience</h1>
-          <div className="mt-5 ml-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.resume.experiences.map((experience, index) => (
-              <ProjectResume
-                key={index}
-                dates={experience.dates}
-                type={experience.type}
-                position={experience.position}
-                bullets={experience.bullets}
-              />
-            ))}
+          <div className="mt-5 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+            <div className="col-span-1">
+              <h1 className="text-2xl text-bold">Experience</h1>
+              <div className="ml-10">
+                {data.resume.experiences.map((experience, index) => (
+                  <ProjectResume
+                    key={index}
+                    dates={experience.dates}
+                    type={experience.type}
+                    position={experience.position}
+                    bullets={experience.bullets}
+                  />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h1 className="text-2xl text-bold">Technical Skill</h1>
+              <div className="ml-10">
+                {data.resume.languages.map((language, index) => (
+                  <SkillMiniIcon
+                    key={index}
+                    icon={language.icon}
+                    name={language.name}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <Footer />
