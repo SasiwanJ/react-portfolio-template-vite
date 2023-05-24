@@ -37,7 +37,7 @@
     "services": [
         {
             "id": "1",
-            "title": "Art Direction",
+            "title": "HTML",
             "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
         },
         {
@@ -66,7 +66,7 @@
                 "dates": "April 2022 - Feb 2023",
                 "type": "Bitkub Online Co., Ltd.",
                 "position": "Operations Associate",
-                "bullets": "Work in cross-functional teams to provide the best customer experience and satisfaction., Provided customer support for assisting users in verifying their accounts to unlock the two-factor authentication feature."
+                "bullets": "Work in cross-functional teams to provide the best customer experience and satisfaction., Provided customer support for assisting users in verifying their accounts to unlock the two-factor authentication feature., Conducted video verification for individuals who were suspected of being nominees, Review transactions for suspicious IP addresses and identify cases where the transaction amounts were unusually high."
             }
         ],
         "education": {

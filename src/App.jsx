@@ -8,6 +8,7 @@ import ProjectResume from "./components/ProjectResume";
 import { useIsomorphicLayoutEffect } from "./utils";
 import { stagger } from "./animations";
 import Footer from "./components/Footer";
+import profile from "../images/sasiwan.png"
 
 // Local Data
 import data from "./data/portfolio.json";
@@ -96,7 +97,7 @@ export default function Home() {
                 {data.headerTaglineFour}
               </h1>
             </div>
-            <img class="object-left object-none object-scale-down h-96 w-96 " src="/images/sasiwan.png" />
+            <img class="object-left object-none object-scale-down h-96 w-96 " src={profile} />
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
