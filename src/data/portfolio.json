@@ -18,6 +18,11 @@
             "id": "2",
             "title": "LinkedIn",
             "link": "https://www.linkedin.com/in/sasiwan-janma/"
+        },
+        {
+            "id": "3",
+            "title": "Discord",
+            "link": "https://discord.gg/QkRU7zCA"
         }
     ],
     "projects": [
